@@ -21,7 +21,6 @@ Délai: 2 jours
 En cours
 
 ## Projet déployé: 
-Lien Github : git@github.com:RekhaLambotte/php-debugging.git 
+Lien Github : https://github.com/RekhaLambotte/php-debugging.git
 
-## Remarques:
-
+Lien Web :  https://rekhalambotte.github.io/php-debugging/
