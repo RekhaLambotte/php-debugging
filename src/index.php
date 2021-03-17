@@ -26,9 +26,6 @@ foreach($week as &$day) {
 print_r($week);
 
 new_exercise(5);
-// === Exercise 5 ===
-// The array should be printing every letter of the alfabet (a-z) but instead it does that + aa-yz
-// Fix the code so the for loop only pushes a-z in the array
 
 $arr = [];
 for ($letter = "a"; $letter <= "z"; $letter++) {
@@ -40,9 +37,6 @@ for ($letter = "a"; $letter <= "z"; $letter++) {
 print_r($arr); 
 
 new_exercise(6);
-// The fixed code should echo the following at the bottom:
-// Here is the name: $name - $name2
-// $name variables are decided as seen in the code, fix all the bugs whilst keeping the functionality!
 $arr = [];
 
 function combineNames($str1 = "", $str2 = "") {
@@ -73,18 +67,47 @@ function randomHeroName()
 
 echo "Here is the name: " . combineNames();
 
+echo "Correction";
+// Pas besoin 
+//function combineNames($str1 = "", $str2 = "") {
+//     $params = [$str1, $str2];
+//     foreach($params as &$param) {
+//         if ($param == "") {
+//             $param = randomHeroName();
+//         }
+//     }
+//     echo implode(" - ", $params);
+// }
+
+// function randomGenerate($arr, $amount) {
+//     for ($i = $amount; $i > 0; $i--) {
+//         array_push($arr, randomHeroName());
+//     }
+//     return $amount;
+// }
+
+function randomHeroNameC()
+{
+    $hero_firstnamesC = ["captain", "doctor", "iron", "Hank", "ant", "Wasp", "the", "Hawk", "Spider", "Black", "Carol"];
+    $hero_lastnamesC = ["America", "Strange", "man", "Pym", "girl", "hulk", "eye", "widow", "panther", "daredevil", "marvel"];
+    $heroesC = [$hero_firstnamesC[array_rand($hero_firstnamesC)], $hero_lastnamesC[array_rand($hero_lastnamesC)]];
+    $randnameC = $heroesC[rand(0,count($heroesC))][rand(0, 10)];
+    return $randnameC;
+}
+
+echo "Here is the name: " . combineNames();
+
 new_exercise(7);
-function copyright(int $year) {
+function copyright($year) {
     return "&copy; $year BeCode";
 }
-//print the copyright
+
 echo copyright(date('Y'));
 
 new_exercise(8);
 function login(string $email, string $password) {
     if($email == 'john@example.be' && $password == 'pocahontas') {
-        echo 'Welcome John ';
-        echo 'Smith ';
+        return 'Welcome John Smith ';
     }
     else return ' No access';
 }
@@ -130,3 +153,9 @@ for($i=0; $i <= $count-1 ; $i++) {
     }
 }
 var_dump($areTheseFruits);
+
+echo "correction";
+
+$areTheseFruitsC = array_intersect($areTheseFruits, $validFruits);
+
+var_dump($areTheseFruitsC);

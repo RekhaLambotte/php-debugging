@@ -18,9 +18,4 @@ Débugger un code fourni.
 Délai: 2 jours
 
 ## Statut:
-En cours
-
-## Projet déployé: 
-Lien Github : https://github.com/RekhaLambotte/php-debugging.git
-
-Lien Web :  https://rekhalambotte.github.io/php-debugging/
+Terminé en 1,5 jours.
